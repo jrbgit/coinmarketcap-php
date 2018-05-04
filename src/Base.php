@@ -21,7 +21,7 @@ class Base
     */
     public function getListings()
     {
-        return $this->buildRequest('listings');
+        return $this->buildRequest('listings/');
     }
 
     /**
@@ -30,7 +30,7 @@ class Base
      */
     public function getTicker($params = array())
     {
-        return $this->buildRequest('ticker', $params);
+        return $this->buildRequest('ticker/', $params);
     }
 
     /**
@@ -40,7 +40,7 @@ class Base
      */
     public function getTickerByCoin($coinId, $params = array())
     {
-        return $this->buildRequest('ticker/' . $coinId, $params);
+        return $this->buildRequest('ticker/' . $coinId . '/', $params);
     }
 
     /**
@@ -49,7 +49,7 @@ class Base
      */
     public function getGlobalData($params = array())
     {
-        return $this->buildRequest('global', $params);
+        return $this->buildRequest('global/', $params);
     }
 
     /**
