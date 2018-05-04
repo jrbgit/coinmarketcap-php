@@ -23,11 +23,14 @@ use CoinMarketCap\Base;
 
 $coinmarketcap = new Base();
 
+// Get listings
+$coinmarketcap->getListings();
+
 // Get ticker
 $coinmarketcap->getTicker();
 
-// Get ticker by coin
-$coin = 'bitcoin';
+// Get ticker by coin id derived from the Listings endpoint
+$coin = 1;
 $coinmarketcap->getTickerByCoin($coin);
 
 // Get global data

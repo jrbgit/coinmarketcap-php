@@ -14,7 +14,15 @@ class Base
     /**
      * @var string
      */
-    const BASE_URL = 'https://api.coinmarketcap.com/v1/';
+    const BASE_URL = 'https://api.coinmarketcap.com/v2/';
+
+    /**
+    * @return array
+    */
+    public function getListings()
+    {
+        return $this->buildRequest('listings');
+    }
 
     /**
      * @param array $params
